@@ -1,0 +1,74 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 18 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Facultate anul 3/Proiect electronica digitala/TestareB
+vclock_divider
+Z1 !s110 1736851450
+!i10b 1
+!s100 84Baf?j<W3b@gGSdTc@6S0
+Iz`T[=YGkn>]MN]Tz3JS1z3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1736851410
+Z4 8C:/Facultate anul 3/Proiect electronica digitala/TestareB/counter.v
+Z5 FC:/Facultate anul 3/Proiect electronica digitala/TestareB/counter.v
+L0 115
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1736851450.000000
+Z8 !s107 C:/Facultate anul 3/Proiect electronica digitala/TestareB/counter.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/Facultate anul 3/Proiect electronica digitala/TestareB/counter.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vcounter
+R1
+!i10b 1
+!s100 5NgZIM<8F5GU9a_:U>aI>1
+IiLJWDVWboSdZ7ETg^0@EI0
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtest_bench
+R1
+!i10b 1
+!s100 TBE8[2kMAZ7b`1=KSW:;G1
+I;XBF[:QOc25Non_EHTgCR3
+R2
+R0
+w1734425898
+8C:/Facultate anul 3/Proiect electronica digitala/TestareB/test.v
+FC:/Facultate anul 3/Proiect electronica digitala/TestareB/test.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Facultate anul 3/Proiect electronica digitala/TestareB/test.v|
+!s90 -reportprogress|300|-work|work|C:/Facultate anul 3/Proiect electronica digitala/TestareB/test.v|
+!i113 1
+R10
+R11
