@@ -1,0 +1,252 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri Dec 13 11:42:55 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     counter
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            285 items scored, 173 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 2.482ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             count_semafor_107__i6  (from clk_c +)
+   Destination:    FD1S3IX    CD             count_semafor_107__i6  (to clk_c +)
+
+   Delay:                   7.349ns  (32.8% logic, 67.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      7.349ns data_path count_semafor_107__i6 to count_semafor_107__i6 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 2.482ns
+
+ Path Details: count_semafor_107__i6 to count_semafor_107__i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              count_semafor_107__i6 (from clk_c)
+Route         2   e 0.838                                  count_semafor[6]
+LUT4        ---     0.408              B to Z              i2_3_lut_rep_5
+Route         4   e 0.937                                  n544
+LUT4        ---     0.408              A to Z              i1_2_lut_3_lut
+Route         1   e 0.660                                  n531
+LUT4        ---     0.408              C to Z              i1_4_lut_adj_2
+Route         2   e 0.798                                  n437
+LUT4        ---     0.408              A to Z              i226_3_lut
+Route         1   e 0.660                                  n15
+LUT4        ---     0.408              C to Z              i1_3_lut
+Route         7   e 1.049                                  n312
+                  --------
+                    7.349  (32.8% logic, 67.2% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 2.482ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             count_semafor_107__i6  (from clk_c +)
+   Destination:    FD1S3IX    CD             count_semafor_107__i5  (to clk_c +)
+
+   Delay:                   7.349ns  (32.8% logic, 67.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      7.349ns data_path count_semafor_107__i6 to count_semafor_107__i5 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 2.482ns
+
+ Path Details: count_semafor_107__i6 to count_semafor_107__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              count_semafor_107__i6 (from clk_c)
+Route         2   e 0.838                                  count_semafor[6]
+LUT4        ---     0.408              B to Z              i2_3_lut_rep_5
+Route         4   e 0.937                                  n544
+LUT4        ---     0.408              A to Z              i1_2_lut_3_lut
+Route         1   e 0.660                                  n531
+LUT4        ---     0.408              C to Z              i1_4_lut_adj_2
+Route         2   e 0.798                                  n437
+LUT4        ---     0.408              A to Z              i226_3_lut
+Route         1   e 0.660                                  n15
+LUT4        ---     0.408              C to Z              i1_3_lut
+Route         7   e 1.049                                  n312
+                  --------
+                    7.349  (32.8% logic, 67.2% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 2.482ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             count_semafor_107__i6  (from clk_c +)
+   Destination:    FD1S3IX    CD             count_semafor_107__i4  (to clk_c +)
+
+   Delay:                   7.349ns  (32.8% logic, 67.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      7.349ns data_path count_semafor_107__i6 to count_semafor_107__i4 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 2.482ns
+
+ Path Details: count_semafor_107__i6 to count_semafor_107__i4
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              count_semafor_107__i6 (from clk_c)
+Route         2   e 0.838                                  count_semafor[6]
+LUT4        ---     0.408              B to Z              i2_3_lut_rep_5
+Route         4   e 0.937                                  n544
+LUT4        ---     0.408              A to Z              i1_2_lut_3_lut
+Route         1   e 0.660                                  n531
+LUT4        ---     0.408              C to Z              i1_4_lut_adj_2
+Route         2   e 0.798                                  n437
+LUT4        ---     0.408              A to Z              i226_3_lut
+Route         1   e 0.660                                  n15
+LUT4        ---     0.408              C to Z              i1_3_lut
+Route         7   e 1.049                                  n312
+                  --------
+                    7.349  (32.8% logic, 67.2% route), 6 logic levels.
+
+Warning: 7.482 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|     7.482 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n312                                    |       7|     161|     93.06%
+                                        |        |        |
+n15                                     |       1|     112|     64.74%
+                                        |        |        |
+n544                                    |       4|      96|     55.49%
+                                        |        |        |
+n437                                    |       2|      73|     42.20%
+                                        |        |        |
+n441                                    |       4|      51|     29.48%
+                                        |        |        |
+n428                                    |       2|      49|     28.32%
+                                        |        |        |
+n531                                    |       1|      38|     21.97%
+                                        |        |        |
+count_semafor[4]                        |       2|      32|     18.50%
+                                        |        |        |
+count_semafor[5]                        |       2|      32|     18.50%
+                                        |        |        |
+count_semafor[6]                        |       2|      32|     18.50%
+                                        |        |        |
+n491                                    |       1|      28|     16.18%
+                                        |        |        |
+count_semafor[1]                        |       4|      21|     12.14%
+                                        |        |        |
+count_semafor[2]                        |       4|      21|     12.14%
+                                        |        |        |
+count_semafor[3]                        |       4|      21|     12.14%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 173  Score: 158709
+
+Constraints cover  285 paths, 41 nets, and 110 connections (90.9% coverage)
+
+
+Peak memory: 61505536 bytes, TRCE: 1671168 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

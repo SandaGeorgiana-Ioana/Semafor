@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf(20): Semantic error in &quot;LOCATE COMP &quot;dipsw[0]&quot; SITE &quot;N1&quot; ;&quot;: </Dynamic>
+            <Dynamic>dipsw[0]</Dynamic>
+            <Navigation>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf(21): Semantic error in &quot;LOCATE COMP &quot;dipsw[1]&quot; SITE &quot;M3&quot; ;&quot;: </Dynamic>
+            <Dynamic>dipsw[1]</Dynamic>
+            <Navigation>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf(22): Semantic error in &quot;LOCATE COMP &quot;dipsw[2]&quot; SITE &quot;P1&quot; ;&quot;: </Dynamic>
+            <Dynamic>dipsw[2]</Dynamic>
+            <Navigation>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf(23): Semantic error in &quot;LOCATE COMP &quot;dipsw[3]&quot; SITE &quot;N2&quot; ;&quot;: </Dynamic>
+            <Dynamic>dipsw[3]</Dynamic>
+            <Navigation>C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/counter.lpf</Navigation>
+            <Navigation>23</Navigation>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v(1): </Dynamic>
+            <Dynamic>counter</Dynamic>
+            <Navigation>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v(117): </Dynamic>
+            <Dynamic>clock_divider</Dynamic>
+            <Navigation>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v</Navigation>
+            <Navigation>117</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v(60): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>24</Dynamic>
+            <Navigation>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v</Navigation>
+            <Navigation>60</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v(108): </Dynamic>
+            <Dynamic>pulse_46</Dynamic>
+            <Navigation>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v</Navigation>
+            <Navigation>108</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>semafor_state</Dynamic>
+            <Dynamic>gray</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v(108): </Dynamic>
+            <Dynamic>led_in_i0_i6</Dynamic>
+            <Navigation>c:/facultate anul 3/proiect electronica digitala/semafor_variantab/semafor/counter.v</Navigation>
+            <Navigation>108</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=slow_clk loads=9 clock_loads=4</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=slow_clk loads=9 clock_loads=4</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00f.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

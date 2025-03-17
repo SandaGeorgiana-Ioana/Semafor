@@ -1,0 +1,240 @@
+
+Loading design for application trce from file counter_impl1_map.ncd.
+Design name: counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Tue Jan 14 12:15:44 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o counter_impl1.tw1 -gui -msgset C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/promote.xml counter_impl1_map.ncd counter_impl1.prf 
+Design file:     counter_impl1_map.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LCMXO3LF-6900C,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk" 12.000000 MHz ;
+            3199 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 73.054ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              count_semafor_163__i9  (from clk_c +)
+   Destination:    FF         Data in        count_semafor_163__i9  (to clk_c +)
+                   FF                        count_semafor_163__i8
+
+   Delay:              10.055ns  (34.2% logic, 65.8% route), 8 logic levels.
+
+ Constraint Details:
+
+     10.055ns physical path delay SLICE_10 to SLICE_10 meets
+     83.333ns delay constraint less
+      0.224ns LSR_SET requirement (totaling 83.109ns) by 73.054ns
+
+ Physical Path Details:
+
+      Data path SLICE_10 to SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.369   SLICE_10.CLK to    SLICE_10.Q1 SLICE_10 (from clk_c)
+ROUTE         4   e 0.896    SLICE_10.Q1 to    SLICE_59.A0 count_semafor_c_8
+CTOF_DEL    ---     0.410    SLICE_59.A0 to    SLICE_59.F0 SLICE_59
+ROUTE         1   e 0.896    SLICE_59.F0 to    SLICE_54.D0 n2735
+CTOF_DEL    ---     0.410    SLICE_54.D0 to    SLICE_54.F0 SLICE_54
+ROUTE         1   e 0.896    SLICE_54.F0 to    SLICE_53.D1 n2944
+CTOF_DEL    ---     0.410    SLICE_53.D1 to    SLICE_53.F1 SLICE_53
+ROUTE         1   e 0.349    SLICE_53.F1 to    SLICE_53.D0 n2894
+CTOF_DEL    ---     0.410    SLICE_53.D0 to    SLICE_53.F0 SLICE_53
+ROUTE         1   e 0.896    SLICE_53.F0 to    SLICE_60.C1 n2892
+CTOF_DEL    ---     0.410    SLICE_60.C1 to    SLICE_60.F1 SLICE_60
+ROUTE         1   e 0.896    SLICE_60.F1 to *5/SLICE_49.D0 n2945
+CTOOFX_DEL  ---     0.605 *5/SLICE_49.D0 to *SLICE_49.OFX0 i55/SLICE_49
+ROUTE         1   e 0.896 *SLICE_49.OFX0 to    SLICE_47.A1 n35
+CTOF_DEL    ---     0.410    SLICE_47.A1 to    SLICE_47.F1 SLICE_47
+ROUTE        13   e 0.896    SLICE_47.F1 to   SLICE_10.LSR n2479 (to clk_c)
+                  --------
+                   10.055   (34.2% logic, 65.8% route), 8 logic levels.
+
+Report:   97.286MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 12.000000 MHz ;    |   12.000 MHz|   97.286 MHz|   8  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: slow_clk   Source: SLICE_47.Q0   Loads: 9
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY PORT "clk" 12.000000 MHz ;   Transfers: 26
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 36
+   Covered under: FREQUENCY PORT "clk" 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: slow_clk   Source: SLICE_47.Q0
+      Covered under: FREQUENCY PORT "clk" 12.000000 MHz ;   Transfers: 1
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 3226 paths, 2 nets, and 407 connections (92.50% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Tue Jan 14 12:15:44 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o counter_impl1.tw1 -gui -msgset C:/Facultate anul 3/Proiect electronica digitala/semafor_variantaB/semafor/promote.xml counter_impl1_map.ncd counter_impl1.prf 
+Design file:     counter_impl1_map.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LCMXO3LF-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "clk" 12.000000 MHz ;
+            3199 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.443ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              count_semafor_163__i9  (from clk_c +)
+   Destination:    FF         Data in        count_semafor_163__i9  (to clk_c +)
+
+   Delay:               0.430ns  (53.5% logic, 46.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.430ns physical path delay SLICE_10 to SLICE_10 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.443ns
+
+ Physical Path Details:
+
+      Data path SLICE_10 to SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.131   SLICE_10.CLK to    SLICE_10.Q1 SLICE_10 (from clk_c)
+ROUTE         4   e 0.199    SLICE_10.Q1 to    SLICE_10.A1 count_semafor_c_8
+CTOF_DEL    ---     0.099    SLICE_10.A1 to    SLICE_10.F1 SLICE_10
+ROUTE         1   e 0.001    SLICE_10.F1 to   SLICE_10.DI1 n117 (to clk_c)
+                  --------
+                    0.430   (53.5% logic, 46.5% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 12.000000 MHz ;    |            -|            -|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: slow_clk   Source: SLICE_47.Q0   Loads: 9
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY PORT "clk" 12.000000 MHz ;   Transfers: 26
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 36
+   Covered under: FREQUENCY PORT "clk" 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: slow_clk   Source: SLICE_47.Q0
+      Covered under: FREQUENCY PORT "clk" 12.000000 MHz ;   Transfers: 1
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 3226 paths, 2 nets, and 407 connections (92.50% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,226 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Jan 08 19:37:49 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     counter
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk_c]
+            2238 items scored, 1292 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 2.852ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \clk_div/count_157__i8  (from clk_c +)
+   Destination:    FD1P3IX    SP             count_semafor_156__i5  (to clk_c +)
+
+   Delay:                   7.616ns  (43.0% logic, 57.0% route), 12 logic levels.
+
+ Constraint Details:
+
+      7.616ns data_path \clk_div/count_157__i8 to count_semafor_156__i5 violates
+      5.000ns delay constraint less
+      0.236ns LCE_S requirement (totaling 4.764ns) by 2.852ns
+
+ Path Details: \clk_div/count_157__i8 to count_semafor_156__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \clk_div/count_157__i8 (from clk_c)
+Route         2   e 0.838                                  count[8]
+A1_TO_FCO   ---     0.684           A[2] to COUT           sub_142_add_2_2
+Route         1   e 0.020                                  n2126
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_4
+Route         1   e 0.020                                  n2127
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_6
+Route         1   e 0.020                                  n2128
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_8
+Route         1   e 0.020                                  n2129
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_10
+Route         1   e 0.020                                  n2130
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_12
+Route         1   e 0.020                                  n2131
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_14
+Route         1   e 0.020                                  n2132
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_16
+Route         1   e 0.020                                  n2133
+FCI_TO_F    ---     0.495            CIN to S[2]           sub_142_add_2_18
+Route         1   e 0.660                                  n423
+LUT4        ---     0.408              A to Z              i1_4_lut_adj_9
+Route        37   e 1.428                                  count_31__N_129
+LUT4        ---     0.408              B to Z              i1272_2_lut_rep_4
+Route        13   e 1.258                                  clk_c_enable_17
+                  --------
+                    7.616  (43.0% logic, 57.0% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 2.852ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \clk_div/count_157__i8  (from clk_c +)
+   Destination:    FD1P3IX    SP             count_semafor_156__i4  (to clk_c +)
+
+   Delay:                   7.616ns  (43.0% logic, 57.0% route), 12 logic levels.
+
+ Constraint Details:
+
+      7.616ns data_path \clk_div/count_157__i8 to count_semafor_156__i4 violates
+      5.000ns delay constraint less
+      0.236ns LCE_S requirement (totaling 4.764ns) by 2.852ns
+
+ Path Details: \clk_div/count_157__i8 to count_semafor_156__i4
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \clk_div/count_157__i8 (from clk_c)
+Route         2   e 0.838                                  count[8]
+A1_TO_FCO   ---     0.684           A[2] to COUT           sub_142_add_2_2
+Route         1   e 0.020                                  n2126
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_4
+Route         1   e 0.020                                  n2127
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_6
+Route         1   e 0.020                                  n2128
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_8
+Route         1   e 0.020                                  n2129
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_10
+Route         1   e 0.020                                  n2130
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_12
+Route         1   e 0.020                                  n2131
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_14
+Route         1   e 0.020                                  n2132
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_16
+Route         1   e 0.020                                  n2133
+FCI_TO_F    ---     0.495            CIN to S[2]           sub_142_add_2_18
+Route         1   e 0.660                                  n423
+LUT4        ---     0.408              A to Z              i1_4_lut_adj_9
+Route        37   e 1.428                                  count_31__N_129
+LUT4        ---     0.408              B to Z              i1272_2_lut_rep_4
+Route        13   e 1.258                                  clk_c_enable_17
+                  --------
+                    7.616  (43.0% logic, 57.0% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 2.852ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \clk_div/count_157__i8  (from clk_c +)
+   Destination:    FD1P3IX    SP             count_semafor_156__i3  (to clk_c +)
+
+   Delay:                   7.616ns  (43.0% logic, 57.0% route), 12 logic levels.
+
+ Constraint Details:
+
+      7.616ns data_path \clk_div/count_157__i8 to count_semafor_156__i3 violates
+      5.000ns delay constraint less
+      0.236ns LCE_S requirement (totaling 4.764ns) by 2.852ns
+
+ Path Details: \clk_div/count_157__i8 to count_semafor_156__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \clk_div/count_157__i8 (from clk_c)
+Route         2   e 0.838                                  count[8]
+A1_TO_FCO   ---     0.684           A[2] to COUT           sub_142_add_2_2
+Route         1   e 0.020                                  n2126
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_4
+Route         1   e 0.020                                  n2127
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_6
+Route         1   e 0.020                                  n2128
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_8
+Route         1   e 0.020                                  n2129
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_10
+Route         1   e 0.020                                  n2130
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_12
+Route         1   e 0.020                                  n2131
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_14
+Route         1   e 0.020                                  n2132
+FCI_TO_FCO  ---     0.130            CIN to COUT           sub_142_add_2_16
+Route         1   e 0.020                                  n2133
+FCI_TO_F    ---     0.495            CIN to S[2]           sub_142_add_2_18
+Route         1   e 0.660                                  n423
+LUT4        ---     0.408              A to Z              i1_4_lut_adj_9
+Route        37   e 1.428                                  count_31__N_129
+LUT4        ---     0.408              B to Z              i1272_2_lut_rep_4
+Route        13   e 1.258                                  clk_c_enable_17
+                  --------
+                    7.616  (43.0% logic, 57.0% route), 12 logic levels.
+
+Warning: 7.852 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets slow_clk]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_c]                   |     5.000 ns|     7.852 ns|    12 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets slow_clk]                |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+count_31__N_129                         |      37|    1162|     89.94%
+                                        |        |        |
+n423                                    |       1|     954|     73.84%
+                                        |        |        |
+n2133                                   |       1|     928|     71.83%
+                                        |        |        |
+n2132                                   |       1|     812|     62.85%
+                                        |        |        |
+n2131                                   |       1|     696|     53.87%
+                                        |        |        |
+n2130                                   |       1|     580|     44.89%
+                                        |        |        |
+n2129                                   |       1|     464|     35.91%
+                                        |        |        |
+n2128                                   |       1|     348|     26.93%
+                                        |        |        |
+clk_c_enable_17                         |      13|     325|     25.15%
+                                        |        |        |
+n2036                                   |       7|     294|     22.76%
+                                        |        |        |
+n2127                                   |       1|     232|     17.96%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 1292  Score: 1483791
+
+Constraints cover  2238 paths, 135 nets, and 310 connections (87.3% coverage)
+
+
+Peak memory: 77438976 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

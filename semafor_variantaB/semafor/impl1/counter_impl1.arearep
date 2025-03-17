@@ -1,0 +1,31 @@
+----------------------------------------------------------------------
+Report for cell counter.TECH
+Register bits:  67 of 7485 (0.895%)
+I/O cells:      39
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        39          100.0
+                            FD1P3AX         4          100.0
+                            FD1P3AY         2          100.0
+                            FD1P3IX        27          100.0
+                            FD1P3JX         1          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3IX        32          100.0
+                                GSR         1          100.0
+                                 IB         3          100.0
+                               LUT4        43          100.0
+                                 OB        36          100.0
+                              PFUMX         2          100.0
+SUB MODULES
+                      clock_divider         1
+                              TOTAL       192
+----------------------------------------------------------------------
+Report for cell clock_divider.v1
+Instance Path : clk_div
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17           43.6
+                            FD1S3AX         1          100.0
+                            FD1S3IX        32          100.0
+                               LUT4         1            2.3
+                              TOTAL        51

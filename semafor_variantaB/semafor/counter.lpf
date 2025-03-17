@@ -1,0 +1,24 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+
+LOCATE COMP "clk" SITE "C8" ;
+FREQUENCY PORT "clk" 12.000000 MHz ;
+IOBUF PORT "clk" PULLMODE=NONE IO_TYPE=LVCMOS33 ;
+
+LOCATE COMP "buton" SITE "B3" ;
+IOBUF PORT "buton" PULLMODE=UP IO_TYPE=LVCMOS33 ;
+
+LOCATE COMP "led[7]" SITE "H11" ;//rosu pietoni
+LOCATE COMP "led[6]" SITE "J13" ;///verde pietoni
+LOCATE COMP "led[5]" SITE "J11" ;
+LOCATE COMP "led[4]" SITE "L12" ;
+LOCATE COMP "led[3]" SITE "K11" ;
+LOCATE COMP "led[2]" SITE "L13" ;//rosu masini
+LOCATE COMP "led[1]" SITE "N15" ;//verde masini
+LOCATE COMP "led[0]" SITE "P16" ;//galben masini
+
+LOCATE COMP "dipsw[0]" SITE "N1" ;
+LOCATE COMP "dipsw[1]" SITE "M3" ;
+LOCATE COMP "dipsw[2]" SITE "P1" ;
+LOCATE COMP "dipsw[3]" SITE "N2" ;
+LOCATE COMP "rst" SITE "N2" ;

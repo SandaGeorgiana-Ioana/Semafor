@@ -1,0 +1,47 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Jan 14 12:15:57 2025 *
+NOTE DESIGN NAME: counter *
+NOTE DEVICE NAME: LCMXO3LF-6900C-6CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS rosu : N8 : out *
+NOTE PINS pulse : T8 : out *
+NOTE PINS count_semafor[2] : R6 : out *
+NOTE PINS count_semafor[3] : T5 : out *
+NOTE PINS count_semafor[4] : T3 : out *
+NOTE PINS count_semafor[5] : R4 : out *
+NOTE PINS count_semafor[6] : L7 : out *
+NOTE PINS count_semafor[7] : N6 : out *
+NOTE PINS count_semafor[8] : M3 : out *
+NOTE PINS count_semafor[9] : R3 : out *
+NOTE PINS count_semafor[10] : R5 : out *
+NOTE PINS count_semafor[11] : P5 : out *
+NOTE PINS count_semafor[12] : M1 : out *
+NOTE PINS count_semafor[13] : P4 : out *
+NOTE PINS count_semafor[14] : T4 : out *
+NOTE PINS count_semafor[15] : T2 : out *
+NOTE PINS count_semafor[16] : P1 : out *
+NOTE PINS count_semafor[17] : R7 : out *
+NOTE PINS count_semafor[18] : N7 : out *
+NOTE PINS count_semafor[19] : L8 : out *
+NOTE PINS count_semafor[20] : T7 : out *
+NOTE PINS count_semafor[21] : P6 : out *
+NOTE PINS count_semafor[22] : M7 : out *
+NOTE PINS count_semafor[23] : R8 : out *
+NOTE PINS led[0] : P16 : out *
+NOTE PINS led[1] : N15 : out *
+NOTE PINS led[2] : L13 : out *
+NOTE PINS led[3] : K11 : out *
+NOTE PINS led[4] : L12 : out *
+NOTE PINS led[5] : J11 : out *
+NOTE PINS led[6] : J13 : out *
+NOTE PINS led[7] : H11 : out *
+NOTE PINS galben : P8 : out *
+NOTE PINS verde : P7 : out *
+NOTE PINS count_semafor[1] : M6 : out *
+NOTE PINS buton : B3 : in *
+NOTE PINS rst : N2 : in *
+NOTE PINS clk : C8 : in *
+NOTE PINS count_semafor[0] : T6 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

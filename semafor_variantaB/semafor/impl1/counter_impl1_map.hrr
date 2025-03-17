@@ -1,0 +1,22 @@
+---------------------------------------------------
+Report for cell counter
+   Instance path: counter
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      62.00        100.0
+                                  LUT4	      45.00        100.0
+                                 IOBUF	         39        100.0
+                                PFUREG	         67        100.0
+                                RIPPLE	         39        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         clock_divider	          1        28.5
+---------------------------------------------------
+Report for cell clock_divider
+   Instance path: counter/clk_div
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.67        28.5
+                                  LUT4	       1.00         2.2
+                                PFUREG	         33        49.3
+                                RIPPLE	         17        43.6
