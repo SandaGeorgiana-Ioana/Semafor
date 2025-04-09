@@ -1,24 +1,21 @@
 module counter ( //modul principal
-    input clk, // s ceas
+    input clk, 
     input rst, // activ pe negativ
     input buton,
-    output reg pulse,
+	
     output reg rosu,
     output reg verde,
     output reg galben,
-	output reg [7:0] led,//iesire pe leduri
-output reg [23:0] count_semafor
+    output reg [7:0] led,//iesire pe leduri
+    output reg [23:0] count_semafor
 );
 
-    reg [31:0] count_pulse; // num pt puls
-   // reg [6:0] count_semafor; //numarator pentru tranzitiile semaf
-	reg [7:0] led_in;
-	
-    parameter count_to=26'd12_000_000;//constanta pe 26 de biti, in zecimal
-    parameter pulse_start=count_to*2;
 
-    reg [1:0] semafor_state;
-    reg buton_push;//daca butonul a fost apasat
+    reg [7:0] led_in;
+    reg [1:0] semafor_state;   //00-verde,01-galben,10-rosu
+    reg buton_push;           //daca butonul a fost apasat
+    parameter count_to=26'd12_000_000;//constanta pe 26 de biti, 12MHz
+    parameter pulse_start=count_to*2;
 
     localparam RED=3;
     localparam YELLOW=2;
@@ -38,13 +35,12 @@ output reg [23:0] count_semafor
     always @(posedge slow_clk or negedge rst) begin
         if (~rst) begin //activ pe neg
             semafor_state <= 2'b00;
-			pulse <= 0;
             rosu <= 0;
             verde <= 1;
             galben <= 0;
             count_semafor <= 0;
             buton_push <= 0;		
-			led_in <= ~8'b100_00_010;
+	    led_in <= ~8'b100_00_010;
 			
         end else begin
 		//daca butonul este apasat pe rosu sau galben
@@ -65,8 +61,8 @@ output reg [23:0] count_semafor
 			
 			    2'b00: begin //
 				    rosu <= 0;
-                    galben <= 0;
-                    verde <= 1;
+                                    galben <= 0;
+                                    verde <= 1;
 				    led_in <= ~8'b100_00_010; //actualizam ledurile-: rosu pietoni si verde masini
 					
                     if (count_semafor >= GREEN && buton_push) begin
@@ -102,7 +98,7 @@ output reg [23:0] count_semafor
 				
                 default: begin
 				
-                    semafor_state <= 2'b00; // Stare implicitã
+                    semafor_state <= 2'b00; // Stare implicitÃ£
                 end
 			endcase
         end
