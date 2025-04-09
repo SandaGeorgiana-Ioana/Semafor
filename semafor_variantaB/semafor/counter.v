@@ -1,18 +1,18 @@
 module counter (
     input clk,
-    input rst,              // reset activ pe 0 (negalogic)
+    input rst,              // avtiv in 0
     input buton,
 
     output reg rosu,
     output reg verde,
     output reg galben,
     output reg [7:0] led,           // ieșire LED-uri
-    output reg [23:0] count_semafor // contor stare semafor
+    output reg [23:0] count_semafor 
 );
 
     reg [7:0] led_in;
     reg [1:0] semafor_state;        // 00 = verde, 01 = galben, 10 = roșu
-    reg buton_push;                // marchează apăsarea butonului
+    reg buton_push;                // retine daca a fost apasat butonul
 
     parameter count_to    = 26'd12_000_000;
     parameter pulse_start = count_to * 2;
@@ -44,22 +44,22 @@ module counter (
             buton_push     <= 0;
             led_in         <= ~8'b100_00_010;
         end else begin
-            // Resetăm semnalul dacă nu suntem în roșu
+            // resetam butonuș
             if (semafor_state == 2'b00 || semafor_state == 2'b01)
                 buton_push <= 0;
 
             if (~buton && (semafor_state == 2'b00 || semafor_state == 2'b01))
                 buton_push <= 1;
 
-            // Incrementează contorul de stare
+            //incrementam
             if (count_semafor >= count_to)
                 count_semafor <= 0;
             else
                 count_semafor <= count_semafor + 1;
 
-            // FSM – schimbare de stare semafor
+            // stari
             case (semafor_state)
-                2'b00: begin // VERDE
+                2'b00: begin //verde
                     rosu    <= 0;
                     galben  <= 0;
                     verde   <= 1;
@@ -71,7 +71,7 @@ module counter (
                     end
                 end
 
-                2'b01: begin // GALBEN
+                2'b01: begin //galben
                     rosu    <= 0;
                     galben  <= 1;
                     verde   <= 0;
@@ -83,7 +83,7 @@ module counter (
                     end
                 end
 
-                2'b10: begin // ROȘU
+                2'b10: begin //rosu
                     rosu    <= 1;
                     galben  <= 0;
                     verde   <= 0;
