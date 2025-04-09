@@ -7,14 +7,14 @@ module counter (
     output reg verde,
     output reg galben,
     output reg [7:0] led,           // ieșire LED-uri
-    output reg [23:0] count_semafor 
+    output reg [23:0] count_semafor //cat sta intr o anumita stare
 );
 
     reg [7:0] led_in;
     reg [1:0] semafor_state;        // 00 = verde, 01 = galben, 10 = roșu
     reg buton_push;                // retine daca a fost apasat butonul
 
-    parameter count_to    = 26'd12_000_000;
+    parameter count_to    = 26'd12_000_000; // sa stiu cat inseamna o secunda
     parameter pulse_start = count_to * 2;
 
     localparam RED    = 3;
